@@ -2,13 +2,14 @@
 package basic;
 
 import materials.Lambertian;
+import textures.ConstantTexture;
 
 import java.io.*;
 import java.util.ArrayList;
 
 public class Render {
-    protected int nx = 400;
-    protected   int ny = 200;
+    protected int nx = 200;
+    protected   int ny = 100;
     protected String picName = "Mine.ppm";
 
     public Vec3 color(Ray r,HitableList world)
@@ -32,9 +33,9 @@ public class Render {
         pw.println("P3");
         pw.println(nx + " " + ny + "\n255");
         ArrayList<Hitable> list = new ArrayList<Hitable>();
-        list.add(new Sphere(new Vec3(0.0f,0.0f,-1.0f), 0.5f,new Lambertian(new Vec3(1,1,1))));
-        list.add(new Sphere(new Vec3(0.3f,0.0f,-1.0f), 0.3f,new Lambertian(new Vec3(1,1,1))));
-        list.add(new Sphere(new Vec3(0.0f,-100.5f,-1.0f), 100f,new Lambertian(new Vec3(1,1,1))));
+        list.add(new Sphere(new Vec3(0.0f,0.0f,-1.0f), 0.5f,new Lambertian(new ConstantTexture(new Vec3(1,1,1)))));
+        list.add(new Sphere(new Vec3(0.3f,0.0f,-1.0f), 0.3f,new Lambertian(new ConstantTexture(new Vec3(1,1,1)))));
+        list.add(new Sphere(new Vec3(0.0f,-100.5f,-1.0f), 100f,new Lambertian(new ConstantTexture(new Vec3(1,1,1)))));
         HitableList world = new HitableList(list);
         Camera camera = new Camera();
         for(int j = ny - 1;j >= 0;j --)

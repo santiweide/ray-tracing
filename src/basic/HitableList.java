@@ -3,6 +3,7 @@ import java.util.*;
 
 public class HitableList implements Hitable{
     private List<Hitable> list;
+    public HitableList(){}
     public HitableList(List<Hitable> l)
     {
         list = l;
@@ -36,4 +37,5 @@ public class HitableList implements Hitable{
         }
         return ret;
     }
+
 }

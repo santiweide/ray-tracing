@@ -1,17 +1,18 @@
-package materials;
-
+package textures;
 
 import basic.*;
-import textures.ConstantTexture;
+import materials.Dielectric;
+import materials.Emergent;
+import materials.Lambertian;
+import materials.Metal;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.List;
 
-public class MaterialRender extends Render {
+public class TextureRendener extends Render {
 
     public Vec3 color(Ray r, HitableList world, int depth)
     {
@@ -39,12 +40,11 @@ public class MaterialRender extends Render {
         PrintWriter pw = new PrintWriter(fos);
         pw.println("P3");
         pw.println(nx + " " + ny + "\n255");
-        ArrayList<Hitable> objList = new ArrayList<Hitable>();
-        objList.add(new Sphere(new Vec3(0.0f,0.0f,-1.0f), 0.5f, new Lambertian(new ConstantTexture(new Vec3(0.1f, 0.2f, 0.5f)))));
-        objList.add(new Sphere(new Vec3(0.0f,-100.5f,-1.0f), 100f, new Lambertian(new ConstantTexture(new Vec3(0.8f, 0.8f, 0.0f)))));
-        objList.add(new Sphere(new Vec3(1,0,-1), 0.5f, new Metal(new Vec3(0.8f, 0.6f, 0.2f), 0.1f)));
-        objList.add(new Sphere(new Vec3(-1,0,-1), 0.5f, new Dielectric(1.5f)));
-        HitableList world = new HitableList(this.random_scene());
+        Texture checker = new CheckerTexture(new ConstantTexture(new Vec3(0.2f, 0.3f, 0.1f)),
+                new ConstantTexture(new Vec3(0.9f, 0.9f, 0.9f)));
+
+//        HitableList world = new HitableList(this.random_scene());
+        HitableList world = new HitableList(this.two_spheres());
 
         Vec3 lookfrom = new Vec3(13,2,3);
         Vec3 lookat = new Vec3(0,0,0);
@@ -74,11 +74,23 @@ public class MaterialRender extends Render {
         pw.close();
     }
 
+    public ArrayList<Hitable> two_spheres()
+    {
+        ArrayList<Hitable> objList = new ArrayList<Hitable>();
+        Texture checker = new CheckerTexture(new ConstantTexture(new Vec3(0.2f, 0.3f, 0.1f)),
+                new ConstantTexture(new Vec3(0.9f, 0.9f, 0.9f)));
+        objList.add(new Sphere(new Vec3(0.0f,-10.0f,0.0f), 10.0f, new Lambertian(checker)));
+        objList.add(new Sphere(new Vec3(0.0f,10.0f,0.0f), 10.0f, new Lambertian(checker)));
+        return  objList;
+    }
     public ArrayList<Hitable> random_scene() {
 
         ArrayList<Hitable> objList = new ArrayList<Hitable>();
         //超大漫反射球作为地板
-        objList.add(new Sphere(new Vec3(0.0f,-1000.0f,0.0f), 1000.0f, new Lambertian(new ConstantTexture(new Vec3(0.5f, 0.5f, 0.5f)))));
+        Texture checker = new CheckerTexture(new ConstantTexture(new Vec3(0.2f, 0.3f, 0.1f)),
+                new ConstantTexture(new Vec3(0.9f, 0.9f, 0.9f)));
+
+        objList.add(new Sphere(new Vec3(0.0f,-1000.0f,0.0f), 1000.0f, new Lambertian(checker)));
         //定义三大球
         objList.add(new Sphere(new Vec3(0, 1, 0), 1.0f, new Dielectric(1.5f)));
         objList.add(new Sphere(new Vec3(-4, 1, 0), 1.0f, new Lambertian(new ConstantTexture(new Vec3(0.4f, 0.2f, 0.1f)))));

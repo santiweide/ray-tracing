@@ -3,10 +3,11 @@ package materials;
 import basic.HitRecord;
 import basic.Ray;
 import basic.Vec3;
+import textures.Texture;
 
 public class Lambertian extends Material{
-    private Vec3 albedo;    //
-    public Lambertian(Vec3 a)
+    private Texture albedo;    //
+    public Lambertian(Texture a)
     {
         albedo = a;
     }
@@ -22,7 +23,7 @@ public class Lambertian extends Material{
     public boolean scatter(Ray r, HitRecord rec, Emergent emergent) {
         Vec3 target = rec.p.Plus(rec.norm).Plus(random_in_unit_sphere());
         emergent.scattered = new Ray(rec.p, target.Subtract(rec.p));
-        emergent.attenuation = albedo;
+        emergent.attenuation = albedo.Value(0,0,rec.p);
         return true;
     }
 }
