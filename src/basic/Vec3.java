@@ -45,4 +45,8 @@ public class Vec3 {
     public Vec3 Multiply(Vec3 v) {
         return new Vec3(e[0]*v.e[0], e[1]*v.e[1], e[2]*v.e[2]);
     }
+    public String toString()
+    {
+        return "["+e[0]+","+e[1]+","+e[2]+"]";
+    }
 }

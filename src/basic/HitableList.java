@@ -33,6 +33,8 @@ public class HitableList implements Hitable{
                 rec.norm = tmpRec.norm;
                 rec.p = tmpRec.p;
                 rec.mat = tmpRec.mat;
+                rec.u = tmpRec.u;
+                rec.v = tmpRec.v;
             }
         }
         return ret;

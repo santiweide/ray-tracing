@@ -1,6 +1,7 @@
 package basic;
 
 
+import javafx.util.Pair;
 import materials.Material;
 
 public class Sphere implements Hitable{
@@ -39,6 +40,9 @@ public class Sphere implements Hitable{
                 rec.p = r.pointAtParameter(rec.t);
                 rec.norm = rec.p.Subtract(center).Scale(1.0f/radius);
                 rec.mat = this.material;
+                Pair<Float,Float> p = getSphereUV(rec.norm);
+                rec.u = p.getKey();
+                rec.v = p.getValue();
                 return true;
             }
             tmp = (-b+fac)/a;
@@ -48,9 +52,19 @@ public class Sphere implements Hitable{
                 rec.p = r.pointAtParameter(rec.t);
                 rec.norm = rec.p.Subtract(center).Scale(1.0f/radius);
                 rec.mat = material;
+                Pair<Float,Float> p = getSphereUV(rec.norm);
+                rec.u = p.getKey();
+                rec.v = p.getValue();
                 return true;
             }
         }
         return false;
+    }
+
+    private Pair<Float,Float> getSphereUV(Vec3 p)
+    {
+        float phi = (float) Math.atan2(p.z(),p.x());
+        float theta = (float) Math.asin(p.y());
+        return  new Pair<>( (float) (1-(phi+Math.PI)/(2*Math.PI)),(float) ((theta+Math.PI/2)/Math.PI));
     }
 }

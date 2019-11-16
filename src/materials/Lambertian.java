@@ -23,7 +23,8 @@ public class Lambertian extends Material{
     public boolean scatter(Ray r, HitRecord rec, Emergent emergent) {
         Vec3 target = rec.p.Plus(rec.norm).Plus(random_in_unit_sphere());
         emergent.scattered = new Ray(rec.p, target.Subtract(rec.p));
-        emergent.attenuation = albedo.Value(0,0,rec.p);
+        emergent.attenuation = albedo.Value(rec.u,rec.v,rec.p);
+        //System.out.println(emergent.attenuation.toString());
         return true;
     }
 }

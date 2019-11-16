@@ -7,6 +7,7 @@ public class HitRecord {
     public Vec3 p;
     public Vec3 norm;
     public Material mat;
-
+    public float u;
+    public float v;
     public HitRecord() {}
 }

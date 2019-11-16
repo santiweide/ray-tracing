@@ -22,13 +22,11 @@ public class MaterialRender extends Render {
             if(depth < 50 && rec.mat.scatter(r,rec,emergent)){
                 return color(emergent.scattered,world,depth + 1).Multiply(emergent.attenuation);
             }
-            else
-            {
+            else {
                 return new Vec3(1,1,1);
             }
         }
-        else
-        {
+        else {
             Vec3 unitDirection = r.direction().unit();
             float t = (unitDirection.y()+1.0f)*0.5f;
             return new Vec3(1,1,1).Scale(1.0f-t).Plus(new Vec3(0.5f,0.7f,1.0f).Scale(t));
@@ -42,7 +40,7 @@ public class MaterialRender extends Render {
         ArrayList<Hitable> objList = new ArrayList<Hitable>();
         objList.add(new Sphere(new Vec3(0.0f,0.0f,-1.0f), 0.5f, new Lambertian(new ConstantTexture(new Vec3(0.1f, 0.2f, 0.5f)))));
         objList.add(new Sphere(new Vec3(0.0f,-100.5f,-1.0f), 100f, new Lambertian(new ConstantTexture(new Vec3(0.8f, 0.8f, 0.0f)))));
-        objList.add(new Sphere(new Vec3(1,0,-1), 0.5f, new Metal(new Vec3(0.8f, 0.6f, 0.2f), 0.1f)));
+        objList.add(new Sphere(new Vec3(1,0,-1), 0.5f, new Metal(new ConstantTexture(new Vec3(0.8f, 0.6f, 0.2f)), 0.1f)));
         objList.add(new Sphere(new Vec3(-1,0,-1), 0.5f, new Dielectric(1.5f)));
         HitableList world = new HitableList(this.random_scene());
 
@@ -82,7 +80,7 @@ public class MaterialRender extends Render {
         //定义三大球
         objList.add(new Sphere(new Vec3(0, 1, 0), 1.0f, new Dielectric(1.5f)));
         objList.add(new Sphere(new Vec3(-4, 1, 0), 1.0f, new Lambertian(new ConstantTexture(new Vec3(0.4f, 0.2f, 0.1f)))));
-        objList.add(new Sphere(new Vec3(4, 1, 0), 1.0f, new Metal(new Vec3(0.7f, 0.6f, 0.5f), 0.0f)));
+        objList.add(new Sphere(new Vec3(4, 1, 0), 1.0f, new Metal(new ConstantTexture(new Vec3(0.7f, 0.6f, 0.5f)), 0.0f)));
 
         //生成地面小球
         int i = 1;
@@ -108,8 +106,8 @@ public class MaterialRender extends Render {
                     else if (choose_mat < 0.95) {
                         /*材料阀值大于等于0.8小于0.95，则设置为镜面反射球，镜面反射球的衰减系数x,y,z及模糊系数都是（0，1）之间的随机数加一再除以2*/
                         objList.add(
-                                new Sphere(center, 0.2f, new Metal(
-                                        new Vec3((float)( 0.5f*(1+(Math.random())) ), (float)( 0.5f*(1+(Math.random())) ), (float)( 0.5f*(1+(Math.random()))) ),
+                                new Sphere(center, 0.2f, new Metal( new ConstantTexture(
+                                        new Vec3((float)( 0.5f*(1+(Math.random())) ), (float)( 0.5f*(1+(Math.random())) ), (float)( 0.5f*(1+(Math.random()))) )),
                                         (float)( 0.5*(1+(Math.random())))
                                 ))
                         );
