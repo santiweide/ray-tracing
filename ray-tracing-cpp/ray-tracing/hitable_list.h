@@ -1,5 +1,14 @@
 #pragma once
 #include "hitable.h"
+
+static vec3 random_in_unit_sphere()
+{
+	vec3 p;
+	do {
+		p = 2.0 * vec3(rand() / double(RAND_MAX), rand() / double(RAND_MAX), rand() / double(RAND_MAX)) - vec3(1, 1, 1);
+	} while (dot(p, p) >= 1.0);
+	return p;
+}
 class hitable_list:public hitable {
 public:
 	hitable ** list;

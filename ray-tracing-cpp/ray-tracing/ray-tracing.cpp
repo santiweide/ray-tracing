@@ -6,10 +6,12 @@
 #include "hitable_list.h"
 #include "camera.h"
 
+
 vec3 color(const ray& r, hitable * world) {
 	hit_record rec;
 	if (world->hit(r, 0.0, FLT_MAX, rec)) {
-		return 0.5 * vec3(rec.normal.x() + 1, rec.normal.y() + 1, rec.normal.z() + 1);
+		vec3 target = rec.p + rec.normal + random_in_unit_sphere();
+		return 0.5 * color(ray(rec.p,target-rec.p),world);
 	}
 	vec3 unit_direction = r.direction().unit_vector();
 	float t = 0.5 * (unit_direction.y() + 1.0);
@@ -21,7 +23,7 @@ int main()
 	int ny = 100;
 	int ns = 100;
 	FILE* stream;
-	freopen_s(&stream, "3.ppm", "w", stdout);
+	freopen_s(&stream, "4.ppm", "w", stdout);
 	printf("P3\n%d %d\n255\n", nx, ny);
 	camera cam;
 	hitable* list[2];
@@ -39,6 +41,7 @@ int main()
 				col = col + color(r, world);
 			}
 			col = col / float(ns);
+			col = vec3(sqrt(col[0]), sqrt(col[1]), sqrt(col[2]));
 			int ir = int(255.99 * col[0]);
 			int ig = int(255.99 * col[1]);
 			int ib = int(255.99 * col[2]);
