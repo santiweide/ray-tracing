@@ -1,12 +1,14 @@
 ﻿  ray-tracing.cpp
-D:\coding\cpp\ray-tracing-cpp\ray-tracing\vec3.h(34,35): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-D:\coding\cpp\ray-tracing-cpp\ray-tracing\vec3.h(34,25): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-D:\coding\cpp\ray-tracing-cpp\ray-tracing\vec3.h(34,16): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-D:\coding\cpp\ray-tracing-cpp\ray-tracing\vec3.h(37,35): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-D:\coding\cpp\ray-tracing-cpp\ray-tracing\vec3.h(37,27): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-D:\coding\cpp\ray-tracing-cpp\ray-tracing\vec3.h(37,19): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-D:\coding\cpp\ray-tracing-cpp\ray-tracing\ray-tracing.cpp(9,10): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
-D:\coding\cpp\ray-tracing-cpp\ray-tracing\ray-tracing.cpp(14,35): warning C4244: “return”: 从“double”转换到“float”，可能丢失数据
-D:\coding\cpp\ray-tracing-cpp\ray-tracing\ray-tracing.cpp(24,10): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-D:\coding\cpp\ray-tracing-cpp\ray-tracing\ray-tracing.cpp(25,65): warning C4305: “参数”: 从“double”到“float”截断
-  ray-tracing.vcxproj -> D:\coding\cpp\ray-tracing-cpp\Debug\ray-tracing.exe
+D:\coding\ray-tracing\ray-tracing-cpp\ray-tracing\vec3.h(34,35): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+D:\coding\ray-tracing\ray-tracing-cpp\ray-tracing\vec3.h(34,25): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+D:\coding\ray-tracing\ray-tracing-cpp\ray-tracing\vec3.h(34,16): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+D:\coding\ray-tracing\ray-tracing-cpp\ray-tracing\vec3.h(37,35): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+D:\coding\ray-tracing\ray-tracing-cpp\ray-tracing\vec3.h(37,27): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+D:\coding\ray-tracing\ray-tracing-cpp\ray-tracing\vec3.h(37,19): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+D:\coding\ray-tracing\ray-tracing-cpp\ray-tracing\sphere.h(14,10): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\coding\ray-tracing\ray-tracing-cpp\ray-tracing\sphere.h(19,14): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\coding\ray-tracing\ray-tracing-cpp\ray-tracing\sphere.h(26,36): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\coding\ray-tracing\ray-tracing-cpp\ray-tracing\hitable_list.h(19,30): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+D:\coding\ray-tracing\ray-tracing-cpp\ray-tracing\ray-tracing.cpp(15,10): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\coding\ray-tracing\ray-tracing-cpp\ray-tracing\ray-tracing.cpp(16,65): warning C4305: “参数”: 从“double”到“float”截断
+  ray-tracing.vcxproj -> D:\coding\ray-tracing\ray-tracing-cpp\Debug\ray-tracing.exe

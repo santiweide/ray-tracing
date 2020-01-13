@@ -14,7 +14,7 @@ bool sphere::hit(const ray& r, float t_min, float t_max, hit_record& rec) const 
 	float b = 2.0 * dot(oc, r.direction());
 	float c = dot(oc, oc) - radius * radius;
 	float discriminant = b * b - 4 * a * c;
-	if (discriminant < 0)
+	if (discriminant > 0)
 	{
 		float temp = (-b - sqrt(discriminant)) / (2.0 * a);
 		if (t_min < temp && temp < t_max) {
@@ -23,7 +23,7 @@ bool sphere::hit(const ray& r, float t_min, float t_max, hit_record& rec) const 
 			rec.normal = (rec.p - center) / radius;
 			return true;
 		}
-		float temp = (-b + sqrt(discriminant)) / (2.0 * a);
+		temp = (-b + sqrt(discriminant)) / (2.0 * a);
 		if (t_min < temp && temp < t_max) {
 			rec.t = temp;
 			rec.p = r.point_at_parameter(rec.t);
