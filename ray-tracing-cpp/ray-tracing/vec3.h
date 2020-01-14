@@ -18,6 +18,10 @@ public:
 	inline float& operator[](int i) {
 		return e[i];
 	} 
+	inline friend vec3 operator-(const vec3 & t)
+	{
+		return vec3(-t[0], -t[1], -t[2]);
+	}
 	inline friend vec3 operator+(const vec3& a, const vec3& b) {
 		return vec3(a[0]+b[0],a[1]+b[1],a[2]+b[2]);
 	}

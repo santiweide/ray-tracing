@@ -45,6 +45,9 @@
     <ClInclude Include="refract.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="dielectric.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ray-tracing.cpp">

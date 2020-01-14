@@ -2,10 +2,7 @@
 #include "ray.h"
 #include "material.h"
 
-vec3 reflect(const vec3& v, const vec3& n)
-{
-	return v - 2 * (double)dot(v, n) * n;
-}
+
 class metal :public material {
 public:
 	vec3 albeo;
@@ -21,6 +18,6 @@ public:
 		vec3 reflected = reflect(r_in.direction(), unit_vector(rec.normal));
 		scattered = ray(rec.p, reflected + fuzz*random_in_unit_sphere());
 		attenuation = albeo;
-		return (dot(reflected,rec.normal) > 0);
+		return (dot(scattered.direction(),rec.normal) > 0);
 	}
 };
