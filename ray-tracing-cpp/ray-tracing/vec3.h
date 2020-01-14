@@ -17,8 +17,7 @@ public:
 	}
 	inline float& operator[](int i) {
 		return e[i];
-	}
-
+	} 
 	inline friend vec3 operator+(const vec3& a, const vec3& b) {
 		return vec3(a[0]+b[0],a[1]+b[1],a[2]+b[2]);
 	}
@@ -30,20 +29,24 @@ public:
 	{
 		return a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
 	}
-	inline friend vec3 operator*(double t,const vec3& v) {
+	inline friend vec3 operator*(float t,const vec3& v) {
 		return vec3(t*v[0], t * v[1], t * v[2]);
+	}
+
+	inline friend vec3 operator*(const vec3& t, const vec3& v) {
+		return vec3(t[0] * v[0], t[1] * v[1], t[2] * v[2]);
 	}
 	inline friend vec3 operator/( const vec3& v, double t) {
 		return vec3(v[0]/t, v[1]/t, v[2]/t);
 	}
 
-	inline double length() {
+	inline float length() {
 		return sqrt(e[0] * e[0] + e[1] * e[1] + e[2] * e[2]);
 	}
-	inline vec3 unit_vector()
+	inline friend vec3 unit_vector(vec3 v)
 	{
-		double len = length();
-		return vec3(float(e[0] / len),float(e[1] / len),float(e[2] / len));
+		float len = v.length();
+		return vec3(float(v[0] / len),float(v[1] / len),float(v[2] / len));
 	}
 }; 
 

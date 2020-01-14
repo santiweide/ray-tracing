@@ -39,6 +39,12 @@
     <ClInclude Include="lambertian.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="metal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="refract.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ray-tracing.cpp">

@@ -38,16 +38,20 @@ public class MaterialRender extends Render {
         pw.println("P3");
         pw.println(nx + " " + ny + "\n255");
         ArrayList<Hitable> objList = new ArrayList<Hitable>();
-        objList.add(new Sphere(new Vec3(0.0f,0.0f,-1.0f), 0.5f, new Lambertian(new ConstantTexture(new Vec3(0.1f, 0.2f, 0.5f)))));
-        objList.add(new Sphere(new Vec3(0.0f,-100.5f,-1.0f), 100f, new Lambertian(new ConstantTexture(new Vec3(0.8f, 0.8f, 0.0f)))));
-        objList.add(new Sphere(new Vec3(1,0,-1), 0.5f, new Metal(new ConstantTexture(new Vec3(0.8f, 0.6f, 0.2f)), 0.1f)));
-        objList.add(new Sphere(new Vec3(-1,0,-1), 0.5f, new Dielectric(1.5f)));
-        HitableList world = new HitableList(this.random_scene());
-
-        Vec3 lookfrom = new Vec3(13,2,3);
-        Vec3 lookat = new Vec3(0,0,0);
-        Camera camera = new Camera(lookfrom, lookat,new Vec3(0,1,0),20,(float) nx/(float)ny);
-        //Camera camera = new Camera();
+        objList.add(new Sphere(new Vec3(0.0f,0.0f,-1.0f), 0.5f,new Lambertian(new ConstantTexture(new Vec3(0.8f,0.3f,0.3f)))));
+        objList.add(new Sphere(new Vec3(0.0f,-100.5f,-1.0f), 100f,new Lambertian(new ConstantTexture(new Vec3(0.8f,0.8f,0.0f)))));
+        objList.add(new Sphere(new Vec3(1f,0.0f,-1.0f), 0.5f,new Metal(new ConstantTexture(new Vec3(0.8f,0.6f,0.2f)),0.0f)));
+        objList.add(new Sphere(new Vec3(-1.0f,0.0f,-1.0f), 0.5f,new Metal(new ConstantTexture(new Vec3(0.8f,0.8f,0.8f)),0.0f)));
+        //objList.add(new Sphere(new Vec3(0.0f,0.0f,-1.0f), 0.5f, new Lambertian(new ConstantTexture(new Vec3(0.1f, 0.2f, 0.5f)))));
+        //objList.add(new Sphere(new Vec3(0.0f,-100.5f,-1.0f), 100f, new Lambertian(new ConstantTexture(new Vec3(0.8f, 0.8f, 0.0f)))));
+        //objList.add(new Sphere(new Vec3(1,0,-1), 0.5f, new Metal(new ConstantTexture(new Vec3(0.8f, 0.6f, 0.2f)), 0.1f)));
+        //objList.add(new Sphere(new Vec3(-1,0,-1), 0.5f, new Dielectric(1.5f)));
+        //HitableList world = new HitableList(this.random_scene());
+        HitableList world = new HitableList(objList);
+        //Vec3 lookfrom = new Vec3(13,2,3);
+        //Vec3 lookat = new Vec3(0,0,0);
+        //Camera camera = new Camera(lookfrom, lookat,new Vec3(0,1,0),20,(float) nx/(float)ny);
+        Camera camera = new Camera();
         for(int j = ny - 1;j >= 0;j --)
         {
             for(int i = 0;i < nx;i ++)

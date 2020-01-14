@@ -1,15 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="91fd8b86-8245-4c6b-ac1c-14e2fcfd3654" name="Default Changelist" comment="" />
+    <list default="true" id="91fd8b86-8245-4c6b-ac1c-14e2fcfd3654" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ray-tracing-cpp/.vs/ray-tracing-cpp/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../ray-tracing-cpp/.vs/ray-tracing-cpp/v16/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ray-tracing-cpp/.vs/ray-tracing-cpp/v16/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../ray-tracing-cpp/.vs/ray-tracing-cpp/v16/Browse.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ray-tracing-cpp/Debug/ray-tracing.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../ray-tracing-cpp/Debug/ray-tracing.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ray-tracing-cpp/Debug/ray-tracing.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../ray-tracing-cpp/Debug/ray-tracing.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ray-tracing-cpp/Debug/ray-tracing.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../ray-tracing-cpp/Debug/ray-tracing.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ray-tracing-cpp/ray-tracing/4.ppm" beforeDir="false" afterPath="$PROJECT_DIR$/../ray-tracing-cpp/ray-tracing/4.ppm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ray-tracing-cpp/ray-tracing/Debug/ray-tracing.log" beforeDir="false" afterPath="$PROJECT_DIR$/../ray-tracing-cpp/ray-tracing/Debug/ray-tracing.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ray-tracing-cpp/ray-tracing/Debug/ray-tracing.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../ray-tracing-cpp/ray-tracing/Debug/ray-tracing.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ray-tracing-cpp/ray-tracing/Debug/ray-tracing.obj.enc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ray-tracing-cpp/ray-tracing/Debug/ray-tracing.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../ray-tracing-cpp/ray-tracing/Debug/ray-tracing.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ray-tracing-cpp/ray-tracing/Debug/vc142.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../ray-tracing-cpp/ray-tracing/Debug/vc142.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ray-tracing-cpp/ray-tracing/Debug/vc142.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../ray-tracing-cpp/ray-tracing/Debug/vc142.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ray-tracing-cpp/ray-tracing/hitable.h" beforeDir="false" afterPath="$PROJECT_DIR$/../ray-tracing-cpp/ray-tracing/hitable.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ray-tracing-cpp/ray-tracing/hitable_list.h" beforeDir="false" afterPath="$PROJECT_DIR$/../ray-tracing-cpp/ray-tracing/hitable_list.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ray-tracing-cpp/ray-tracing/lambertian.h" beforeDir="false" afterPath="$PROJECT_DIR$/../ray-tracing-cpp/ray-tracing/lambertian.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ray-tracing-cpp/ray-tracing/material.h" beforeDir="false" afterPath="$PROJECT_DIR$/../ray-tracing-cpp/ray-tracing/material.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ray-tracing-cpp/ray-tracing/ray-tracing.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../ray-tracing-cpp/ray-tracing/ray-tracing.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ray-tracing-cpp/ray-tracing/ray-tracing.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../ray-tracing-cpp/ray-tracing/ray-tracing.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ray-tracing-cpp/ray-tracing/ray-tracing.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/../ray-tracing-cpp/ray-tracing/ray-tracing.vcxproj.filters" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ray-tracing-cpp/ray-tracing/sphere.h" beforeDir="false" afterPath="$PROJECT_DIR$/../ray-tracing-cpp/ray-tracing/sphere.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ray-tracing-cpp/ray-tracing/vec3.h" beforeDir="false" afterPath="$PROJECT_DIR$/../ray-tracing-cpp/ray-tracing/vec3.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mine.ppm" beforeDir="false" afterPath="$PROJECT_DIR$/Mine.ppm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ray-tracing-java/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ray-tracing-java/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/basic/Render.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/basic/Render.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/materials/MaterialRender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/materials/MaterialRender.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1WK7NAZzxiABkdZvjhjy2d6V8vz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
   </component>
@@ -50,10 +84,22 @@
       <option name="presentableId" value="Default" />
       <updated>1578886389876</updated>
       <workItem from="1578886395009" duration="233000" />
+      <workItem from="1578991149541" duration="2095000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
