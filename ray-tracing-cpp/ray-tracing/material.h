@@ -1,4 +1,5 @@
 #pragma once
+
 #include "hitable.h"
 
 struct hit_record;

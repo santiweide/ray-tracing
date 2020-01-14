@@ -1,0 +1,22 @@
+﻿  ray-tracing.cpp
+D:\coding\ray-tracing\ray-tracing-cpp\ray-tracing\vec3.h(50,35): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+D:\coding\ray-tracing\ray-tracing-cpp\ray-tracing\vec3.h(50,27): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+D:\coding\ray-tracing\ray-tracing-cpp\ray-tracing\vec3.h(50,19): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+D:\coding\ray-tracing\ray-tracing-cpp\ray-tracing\material.h(12,15): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+D:\coding\ray-tracing\ray-tracing-cpp\ray-tracing\sphere.h(17,10): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\coding\ray-tracing\ray-tracing-cpp\ray-tracing\sphere.h(22,14): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\coding\ray-tracing\ray-tracing-cpp\ray-tracing\sphere.h(30,36): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\coding\ray-tracing\ray-tracing-cpp\ray-tracing\hitable_list.h(18,31): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+D:\coding\ray-tracing\ray-tracing-cpp\ray-tracing\camera.h(29,15): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\coding\ray-tracing\ray-tracing-cpp\ray-tracing\camera.h(39,15): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\coding\ray-tracing\ray-tracing-cpp\ray-tracing\camera.h(57,15): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\coding\ray-tracing\ray-tracing-cpp\ray-tracing\dielectric.h(8,21): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\coding\ray-tracing\ray-tracing-cpp\ray-tracing\ray-tracing.cpp(14,5): warning C4305: “参数”: 从“double”到“float”截断
+D:\coding\ray-tracing\ray-tracing-cpp\ray-tracing\ray-tracing.cpp(27,10): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\coding\ray-tracing\ray-tracing-cpp\ray-tracing\ray-tracing.cpp(28,14): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+D:\coding\ray-tracing\ray-tracing-cpp\ray-tracing\ray-tracing.cpp(28,65): warning C4305: “参数”: 从“double”到“float”截断
+D:\coding\ray-tracing\ray-tracing-cpp\ray-tracing\ray-tracing.cpp(41,75): warning C4305: “参数”: 从“double”到“float”截断
+D:\coding\ray-tracing\ray-tracing-cpp\ray-tracing\ray-tracing.cpp(42,82): warning C4305: “参数”: 从“double”到“float”截断
+D:\coding\ray-tracing\ray-tracing-cpp\ray-tracing\ray-tracing.cpp(43,71): warning C4305: “参数”: 从“double”到“float”截断
+  LINK : 已指定 /LTCG，但不需要生成代码；从链接命令行中移除 /LTCG 以提高链接器性能
+  ray-tracing.vcxproj -> D:\coding\ray-tracing\ray-tracing-cpp\Release\ray-tracing.exe
